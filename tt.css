@@ -1,0 +1,62 @@
+/* Đảm bảo toàn bộ trang chiếm 100% chiều cao màn hình */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; /* Đảm bảo body chiếm 100% chiều cao */
+    font-family:'Times New Roman', Times, serif;
+    overflow-x: hidden; /* Ngăn chặn thanh cuộn ngang */
+}
+
+/* Sử dụng Flexbox để đặt footer xuống dưới */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu là toàn màn hình */
+}
+
+/* Header styling */
+.nabar {
+    display: flex;          /* Sử dụng Flexbox để sắp xếp các phần tử */
+    justify-content: space-around; /* Căn giữa các mục trong navbar */
+    background-color: #00FFFF; /* Màu nền của navbar */
+    padding: 20px;         /* Khoảng cách trên và dưới của navbar */
+    font-size: 2em;
+    height: 50px;
+}
+.nabar a {
+    color: black;            /* Màu văn bản */
+    text-decoration: none;   /* Bỏ gạch chân */
+    padding: 0 20px;         /* Khoảng cách giữa các mục */
+    font-weight: bold;       /* In đậm văn bản */
+}
+
+/* Tùy chọn: Thêm hiệu ứng khi di chuột qua */
+.nabar a:hover {
+    color:red;
+}
+/* Nội dung chính của trang */
+.content {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+    flex-grow: 1; /* Chiếm phần còn lại của chiều cao */
+    align-items: center;
+    align-content: center;
+}
+  /* Đặt ảnh luôn chiếm 100% chiều rộng của phần tử chứa (để ảnh tự điều chỉnh) */
+  .content-item img {
+    width: 100%;
+    height: auto;  /* Giữ tỷ lệ ảnh */
+    max-width: 100%; /* Giới hạn kích thước ảnh không vượt quá kích thước gốc */
+    padding: 0 20px;
+}
+/* Đặt footer ở cuối trang */
+.footer {
+    background-color:#00FFFF;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size: 2em;
+    min-height: auto;
+}

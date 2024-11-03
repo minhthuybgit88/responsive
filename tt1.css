@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .content-item img {
+        width: 60%; /* Chiếm 90% chiều rộng màn hình cho thiết bị di động */
+        margin: 10px auto; /* Căn giữa nội dung */
+        padding: 0 80px;
+    }
+    footer p{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+}  
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nabar{
+            font-size: 2rem;
+        }
+    }
+    /* Media query cho màn hình máy tính(màn hình lớn) */
+    @media (min-width: 1025px) {
+        .content {
+            grid-template-columns: repeat(4, 1fr); /* Hiển thị 4 cột cho màn hình desktop */
+        }
+      
+    }

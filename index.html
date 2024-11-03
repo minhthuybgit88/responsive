@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Responsive</title>
+    <link rel="stylesheet" href="tt.css">
+    <link rel="stylesheet" href="tt1.css">
+</head>
+<body>
+    <style>
+/* Màn hình rất nhỏ (smartphone) */
+@media (max-width: 768px) {
+    .nabar{
+            flex-direction: column;
+            height: auto;
+            font-size: 1.5rem;
+        }
+    .content{
+        flex-direction: column;
+        align-items: center; /* Căn giữa các phần tử con theo chiều ngang */
+        width: 100%; /* Đảm bảo content chiếm hết chiều ngang */
+        padding: 0; /* Loại bỏ khoảng trắng không cần thiết */
+        display: flex;
+        overflow-x: hidden;
+        
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content {
+        display: grid; /* Đảm bảo sử dụng grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Hiển thị dạng lưới với 2 cột */
+        align-items: center;
+        gap: 20px; /* Thêm khoảng cách giữa các item */
+        padding: 20px; /* Thêm padding cho nội dung */
+    }
+    .content-item img {
+        width: 85%; /* Chiếm 90% chiều rộng màn hình cho thiết bị di động */
+        margin: 10px auto; /* Căn giữa nội dung */
+    }
+}
+@media (min-width: 1025px) {
+    .content-item img {
+        width: 95%; /* Chiếm 95% chiều rộng màn hình cho thiết bị di động */
+        margin: 10px auto; /* Căn giữa nội dung */
+        padding: 0 10px;
+    }
+}
+    </style>
+    <!-- Navigation Bar -->
+    <nav class="nabar">
+        <a href="#">Trang chủ</a>
+        <a href="#">Tìm kiếm</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Cài đặt</a>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="content-item">
+            <img src="img/Coder.jpg" alt="Coder Icon">
+        </div>
+        <div class="content-item">
+            <img src="img/html.jpg" alt="html">
+        </div>
+        <div class="content-item">
+            <img src="img/css.jpg" alt="css">
+        </div>
+        <div class="content-item">
+            <img src="img/tk.jpg" alt="tk">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Email: nguyenminhthuybg88@gmail.com<br>Điện thoại: 0983.829.9xx<br>© 2023-2024 - Bản quyền Minh Thúy</p>
+    </footer>
+
+</body>
+</html>
